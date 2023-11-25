@@ -12,6 +12,9 @@ const withdrawInfo = require('./routes/api/withdrawInfo.route.ts');
 const depositInfo = require('./routes/api/depositInfo.route.ts');
 const transaction = require('./routes/api/transaction.route.ts');
 
+const port = process.env.PORT || 5000;
+console.log(`port: ${port}`);
+
 cron.schedule('*/10 * * * *', () => {
   // WalletService.updateTopTokens().then(() => {
   //   console.log("Top Token data updated")
@@ -49,6 +52,11 @@ app.use(`/api/notification`, notification);
 app.use(`/api/withdrawinfo`, withdrawInfo);
 app.use(`/api/depositinfo`, depositInfo);
 app.use(`/api/transaction`, transaction);
+
+app.get("/", (req, res) => {
+  console.log("Hello, this server is running"); 
+  res.send("Hello, this server is running"); 
+}); 
 
 // 404 error
 app.all('*', (req, res, next) => {
