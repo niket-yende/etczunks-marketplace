@@ -41,6 +41,5 @@ npm run client
 ```
 2. Backend: Listen [http://localhost:5000](http://localhost:5000)
 ```
-cd backend
-node server.ts
+npm run server
 ```
