@@ -36,9 +36,9 @@
     "web3modal": "^1.9.4"
   },
   "scripts": {
-    "main": "cd backend & node server.ts",
+    "main": "cd backend && node server.ts",
     "client": "craco  start",
-    "server": "cd backend & node server.ts",
+    "server": "cd backend && node server.ts",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "craco  build build && gulp licenses",
     "test": "craco  test test --env=jsdom",
