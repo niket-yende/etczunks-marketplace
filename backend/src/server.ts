@@ -54,8 +54,8 @@ app.use(`/api/depositinfo`, depositInfo);
 app.use(`/api/transaction`, transaction);
 
 app.get("/", (req, res) => {
-  console.log("Hello, this server is running"); 
-  res.send("Hello, this server is running"); 
+  console.log("Hello, this server is running!"); 
+  res.send("Hello, this server is running!"); 
 }); 
 
 // 404 error
