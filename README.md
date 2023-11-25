@@ -11,28 +11,36 @@ Our company undertook the development of ETCZUNKS at the behest of one of our es
 - Node version: 16.11.1
 
 ## Setup
-
-### `yarn`
-
-Install npm modules for both frontend and backend codes.
-In the project root and backend directories, you can run:
-
+### Install pre-requisites
+1. Install node using nvm (v16.20.2)
 ```
+nvm install v16.20.2
+nvm use v16.20.2
+```
+2. Install mysql server
+```
+sudo apt update
+sudo apt install mysql-server
+sudo systemctl start mysql.service
+```
+
+### Install dependencies
+1. Install node_modules for frontend from root directory
+```
+npm install
+```
+2. Install node_modules for backend
+```
+cd backend/
 yarn
 ```
-
-### `npm run dev`
-
-Run the frontend and backend codes.
-Frontend: Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-Backend: Listen [http://localhost:5000](http://localhost:5000)
-
-### `npm run client`
-
-Run the frontend code
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm run server`
-
-Run the backend code
-Listen [http://localhost:5000](http://localhost:5000)
+### Run the apps
+1. Frontend: Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm run client
+```
+2. Backend: Listen [http://localhost:5000](http://localhost:5000)
+```
+cd backend
+node server.ts
+```
