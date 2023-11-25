@@ -27,7 +27,7 @@ sudo systemctl start mysql.service
 ### Install dependencies
 1. Install node_modules for frontend from root directory
 ```
-npm install
+npm install --save --legacy-peer-deps
 ```
 2. Install node_modules for backend
 ```
